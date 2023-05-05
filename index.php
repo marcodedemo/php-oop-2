@@ -60,7 +60,7 @@ require_once './db.php';
                         <div class="card-text d-flex flex-column">
                             
                             <!-- supplier -->
-                            <div id="supplier"> <strong>Supplier: </strong> <?= $product->supplier ?> </div>
+                            <div class="supplier"> <strong>Supplier: </strong> <?= $product->supplier ?> </div>
 
                     
                             <?php
@@ -71,13 +71,13 @@ require_once './db.php';
                                     ?>
 
                                     <!-- material -->
-                                    <div id="material"> <strong>Material: </strong> <?= $product->material ?> </div>
+                                    <div class="material"> <strong>Material: </strong> <?= $product->material ?> </div>
 
                                     <!-- color -->
-                                    <div id="color"> <strong>Color: </strong> <?= $product->color ?> </div>
+                                    <div class="color"> <strong>Color: </strong> <?= $product->color ?> </div>
 
                                     <!-- durability -->
-                                    <div id="durability"> <strong>Durability: </strong> <?= $product->getDurability() ?> </div>
+                                    <div class="durability"> <strong>Durability: </strong> <?= $product->getDurability() ?> </div>
 
 
                                     <?php break;
@@ -87,13 +87,13 @@ require_once './db.php';
                                     ?>
 
                                     <!-- material -->
-                                    <div id="material"> <strong>Material: </strong> <?= $product->material ?> </div>
+                                    <div class="material"> <strong>Material: </strong> <?= $product->material ?> </div>
 
                                     <!-- animal age -->
-                                    <div id="animal-age"> <strong>Animal Age Range: </strong> <?= $product->animalAge ?> </div>
+                                    <div class="animal-age"> <strong>Animal Age Range: </strong> <?= $product->animalAge ?> </div>
 
                                     <!-- durability -->
-                                    <div id="durability"> <strong>Durability: </strong> <?= $product->getDurability() ?> </div>
+                                    <div class="durability"> <strong>Durability: </strong> <?= $product->getDurability() ?> </div>
                                     <?php
                                     break;
                                 
@@ -102,10 +102,10 @@ require_once './db.php';
                                     ?>
 
                                     <!-- ingredients -->
-                                    <div id="ingredients"> <strong>Ingredients: </strong> <?= implode(", ",$product->ingredients) ?> </div>
+                                    <div class="ingredients"> <strong>Ingredients: </strong> <?= implode(", ",$product->ingredients) ?> </div>
 
                                     <!-- weight -->
-                                    <div id="weight"> <strong>Weight: </strong> <?= $product->getWeight() ?> </div>
+                                    <div class="weight"> <strong>Weight: </strong> <?= $product->getWeight() ?> </div>
 
                                     <?php
                                     break;
@@ -116,13 +116,13 @@ require_once './db.php';
 
 
                             <!-- price -->
-                            <div id="price"> <strong>Price: </strong> <?= $product->getPrice() ?> </div>
+                            <div class="price"> <strong>Price: </strong> <?= $product->getPrice() ?> </div>
 
                             <!-- discount -->
-                            <div id="discount"> <strong>Discount: </strong> <?= $product->getDiscountPercentage() ?> </div>
+                            <div class="discount"> <strong>Discount: </strong> <?= $product->getDiscountPercentage() ?> </div>
                             
                             <!-- final Price -->
-                            <div id="final-price"> <strong>Final Price: </strong> <?= $product->getFinalPrice() ?> </div>
+                            <div class="final-price"> <strong>Final Price: </strong> <?= $product->getFinalPrice() ?> </div>
 
 
                         </div>

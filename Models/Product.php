@@ -1,24 +1,20 @@
 <?php
 
+require_once __DIR__ . '/Category.php';
 class Product {
     
     public $name;
     public $category;
-    public $animalType = "Any";
     public $supplier;
-    public $animalSize;
-    public $animalAge;
     public $price;
     public $discount = 0;
 
 
-    function __construct(string $name, string $category, string $supplier, string $animalSize, string $animalAge, int $price){
+    function __construct(string $name, Category $category, string $supplier, float $price){
 
         $this->name = $name;
         $this->category = $category;
         $this->supplier = $supplier;
-        $this->animalSize = $animalSize;
-        $this->animalAge = $animalAge;
         $this->price = $price;
 
         $this->setSupplierDiscount();
@@ -44,14 +40,9 @@ class Product {
         return $this->discount . "%";
     }
 
-    public function getAnimalAge(){
-        if($this->animalAge != "Any"){
-            
-            return $this->animalAge . " years";
 
-        }else{
-            return "Any";
-        }
+    public function getPrice(){
+        return $this->price . "€";
     }
 
     // funzione che restituisce il prezzo con lo sconto applicato
@@ -59,6 +50,6 @@ class Product {
 
         $finalPrice = $this->price - ($this->price * $this->discount) / 100;
 
-        return $finalPrice . "€";
+        return round($finalPrice, 2) . "€";
     }
 }

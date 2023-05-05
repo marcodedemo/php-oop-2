@@ -19,6 +19,7 @@ $categories = [
 
 
 
+
 $products = [
 
     new Utility("Nail Cutter", $categories[1], "Supplier - 1", 4.99, "0-5", "Plastic"),
@@ -36,10 +37,25 @@ $products = [
 
 
 
-
-
-
-
-
-
 ];
+
+
+
+// visualizza un errore in pagina se un valore di durabilità non rientra nei parametri
+
+try{
+
+    $products[0]->setDurability(2);
+    $products[2]->setDurability(4);
+    $products[3]->setDurability(2);
+    $products[5]->setDurability(5);
+    $products[6]->setDurability(9);
+    $products[7]->setDurability(8);
+    $products[8]->setDurability(4);
+    $products[11]->setDurability(1);
+
+
+}catch (Exception $e){
+
+    echo $e;
+}

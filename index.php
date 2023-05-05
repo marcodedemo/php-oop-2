@@ -72,6 +72,11 @@ require_once './db.php';
 
                                     <!-- material -->
                                     <div id="material"> <strong>Material: </strong> <?= $product->material ?> </div>
+
+                                    <!-- durability -->
+                                    <div id="durability"> <strong>Durability: </strong> <?= $product->getDurability() ?> </div>
+
+
                                     <?php break;
                                 
                                 case 'Utility':
@@ -80,6 +85,10 @@ require_once './db.php';
 
                                     <!-- material -->
                                     <div id="material"> <strong>Material: </strong> <?= $product->material ?> </div>
+
+
+                                    <!-- durability -->
+                                    <div id="durability"> <strong>Durability: </strong> <?= $product->getDurability() ?> </div>
                                     <?php
                                     break;
                                 

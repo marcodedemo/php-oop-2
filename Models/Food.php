@@ -18,4 +18,8 @@ class Food extends Product{
 
     }
 
+    function getWeight(){
+        return $this->weight . "kg";
+    }
+
 }

@@ -73,6 +73,9 @@ require_once './db.php';
                                     <!-- material -->
                                     <div id="material"> <strong>Material: </strong> <?= $product->material ?> </div>
 
+                                    <!-- color -->
+                                    <div id="color"> <strong>Color: </strong> <?= $product->color ?> </div>
+
                                     <!-- durability -->
                                     <div id="durability"> <strong>Durability: </strong> <?= $product->getDurability() ?> </div>
 
@@ -86,6 +89,8 @@ require_once './db.php';
                                     <!-- material -->
                                     <div id="material"> <strong>Material: </strong> <?= $product->material ?> </div>
 
+                                    <!-- animal age -->
+                                    <div id="animal-age"> <strong>Animal Age Range: </strong> <?= $product->animalAge ?> </div>
 
                                     <!-- durability -->
                                     <div id="durability"> <strong>Durability: </strong> <?= $product->getDurability() ?> </div>
@@ -98,6 +103,10 @@ require_once './db.php';
 
                                     <!-- ingredients -->
                                     <div id="ingredients"> <strong>Ingredients: </strong> <?= implode(", ",$product->ingredients) ?> </div>
+
+                                    <!-- weight -->
+                                    <div id="weight"> <strong>Weight: </strong> <?= $product->getWeight() ?> </div>
+
                                     <?php
                                     break;
                             }
